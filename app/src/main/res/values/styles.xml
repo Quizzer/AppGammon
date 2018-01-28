@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base (Light.DarkActionBar) application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- edit text color, dialog texts, settings title -->
+        <item name="android:textColorPrimary">@color/dark_brown_tangelo</item>
+        <!-- disabled btns, scroll bar, checkbox/radio btn borders, settings subtitle -->
+        <item name="android:textColorSecondary">@color/light_brown</item>
+        <item name="android:textColorPrimaryInverse">@color/debug_orange</item>
+        <item name="android:textColorSecondaryInverse">@color/debug_red</item>
+
+        <item name="themed_GameBackground_light">@drawable/wood_light_02</item>
+        <item name="themed_GameBackground_dark">@drawable/wood_dark_02</item>
+    </style>
+
+    <!-- Base (Light) application theme. -->
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/debug_orange</item>
+        <item name="colorPrimaryDark">@color/debug_red</item>
+        <item name="colorAccent">@color/debug_orange</item>
+
+        <!-- edit text color, dialog texts, settings title -->
+        <item name="android:textColorPrimary">@color/dark_brown_tangelo</item>
+        <!-- disabled btns, scroll bar, checkbox/radio btn borders, settings subtitle -->
+        <item name="android:textColorSecondary">@color/light_brown</item>
+        <item name="android:textColorPrimaryInverse">@color/debug_orange</item>
+        <item name="android:textColorSecondaryInverse">@color/debug_red</item>
+
+        <item name="themed_GameBackground_light">@drawable/lam_light</item>
+        <item name="themed_GameBackground_dark">@drawable/lam_dark</item>
+    </style>
+    
+    <!-- Dark application theme. -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/debug_orange</item>
+        <item name="colorPrimaryDark">@color/debug_red</item>
+        <item name="colorAccent">@color/debug_green</item>
+
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/light_brown</item>
+        <item name="android:textColorPrimaryInverse">@color/dark_brown_tangelo</item>
+        <item name="android:textColorSecondaryInverse">@color/sweet_brown</item>
+
+        <item name="themed_GameBackground_light">@drawable/wood_light_01</item>
+        <item name="themed_GameBackground_dark">@drawable/wood_dark_01</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar">-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Theme as Splash background instead of layout file -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+</resources>

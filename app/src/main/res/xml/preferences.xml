@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="@string/prefsUsername"
+        android:defaultValue="@string/prefsUsername_default"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/prefsUsername_Summary"
+        android:title="@string/prefsUsername_PreferenceTitle" />
+
+    <PreferenceCategory android:title="Design">
+
+        <ListPreference
+            android:key="@string/prefsDarkToggle"
+            android:defaultValue="@string/prefsDarkToggle_default"
+            android:entries="@array/colors_names"
+            android:entryValues="@array/colors_keys"
+            android:title="@string/prefsDarkToggle_PreferenceTitle"
+            android:dialogTitle="@string/prefsDarkToggle_DialogTitle" />
+        <SwitchPreference
+            android:key="@string/prefsOrientationToggle"
+            android:defaultValue="@string/prefsOrientationToggle_default"
+            android:summaryOn="@string/prefsOrientationToggle_SummaryOn"
+            android:summaryOff="@string/prefsOrientationToggle_SummaryOff"
+            android:title="@string/prefsOrientationToggle_PreferenceTitle"/>
+
+        <ListPreference
+            android:key="@string/prefsThemesList"
+            android:defaultValue="@string/prefsThemesList_default"
+            android:entries="@array/themes_names"
+            android:entryValues="@array/themes_keys"
+            android:title="@string/prefsThemesList_PreferenceTitle"
+            android:dialogTitle="@string/prefsThemesList_DialogTitle"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

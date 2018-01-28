@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="player_dark">#823b11</color>
+    <color name="player_light">#e7a873</color>
+
+    <!--<color name="player_light1">#d5201b</color>-->
+    <!--<color name="player_dark1">#ffffff</color>-->
+
+    <color name="trans50_white50">#80ffffff</color>
+    <color name="trans50_black50">#80000000</color>
+    <color name="white">#fff</color>
+
+    <!-- Color scheme - colors.co -->
+    <color name="orange_yellow">#FBCF6C</color>
+    <color name="dark_brown_tangelo">#7C644F</color>
+    <color name="papaya_whip">#F8F1D4</color>
+    <color name="sweet_brown">#A5512C</color>
+    <color name="light_brown">#C1701C</color>
+
+
+    <!-- Debug Default Colors -->
+    <color name="debug_green">#4cd44c</color>
+    <color name="debug_red">#b61b03</color>
+    <color name="debug_orange">#f2a23a</color>
+    <color name="debug_blue">#2f85dc</color>
+
+
+</resources>

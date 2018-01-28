@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_PlayerName">Name des Spielers</string>
+    <string name="against">gegen</string>
+    <string name="lastPlayed_string">%s gespielt</string>
+    <string name="title_activity_history">Verlauf</string>
+    <string name="title_activity_new_challenge">Neues Duell</string>
+    <string name="youAgainst_string">gegen %s</string>
+    <string name="challengeNotFound_error">Fehler: Kein Duell gefunden</string>
+    <string name="increase">erhöhen</string>
+    <string name="lost">verloren</string>
+    <string name="deletion">Löschen</string>
+    <string name="accept">Annehmen</string>
+    <string name="reject">Ablehnen</string>
+    <string name="title_activity_game">Spiel</string>
+    <string name="open">Ausstehend...</string>
+    <string name="defeat">Niederlage</string>
+    <string name="victory">Sieg</string>
+    <string name="gameClosed">Spiel abgeschlossen</string>
+    <string name="game_over">Spiel beendet</string>
+    <string name="game_over_text">Wie ist das Spiel ausgegangen?</string>
+    <string name="openGamesFirst">Beende zuerst das ausstehende Spiel.</string>
+    <string name="notGamesyet">noch keine Spiele</string>
+    <string name="settings">Einstellungen</string>
+    <string name="raisesUpTo_string">%1$s erhöht auf %2$d Punkte</string>
+    <string name="prefsUsername_PreferenceTitle">Dein Name</string>
+    <string name="prefsUsername_Summary">Dieser Name wird in allen deinen Spielen verwendet.</string>
+    <string name="single">einfach</string>
+    <string name="dark">Dunkel</string>
+    <string name="light">Hell</string>
+    <string name="prefsDarkToggle_DialogTitle">Wähle deine Spielfarbe</string>
+    <string name="prefsDarkToggle_PreferenceTitle">Bevorzugte Spielfarbe</string>
+    <string name="prefsOrientationToggle_SummaryOff">Ursprüngliche Anordnung der Spieler</string>
+    <string name="prefsOrientationToggle_PreferenceTitle">Bildschirm umdrehen</string>
+    <string name="prefsOrientationToggle_SummaryOn">Anordnung der Spieler ist umgekehrt</string>
+</resources>

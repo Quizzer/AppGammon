@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- Themes -->
+<string-array name="themes_keys" translatable="false">
+    <item>@string/theme01_key</item>
+    <item>@string/theme02_key</item>
+    <item>@string/theme03_key</item>
+</string-array>
+
+<string-array name="themes_names" translatable="false">
+    <item>@string/theme01</item>
+    <item>@string/theme02</item>
+    <item>@string/theme03</item>
+</string-array>
+
+
+<!-- Colors -->
+<string-array name="colors_keys" translatable="false">
+    <item>@string/light_key</item>
+    <item>@string/dark_key</item>
+</string-array>
+
+<string-array name="colors_names" translatable="true">
+    <item>@string/light</item>
+    <item>@string/dark</item>
+</string-array>
+
+</resources>

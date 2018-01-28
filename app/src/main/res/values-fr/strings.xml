@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_PlayerName">Nom de joueur</string>
+    <string name="against">contre</string>
+    <string name="title_activity_new_challenge">Nouveau duel</string>
+    <string name="youAgainst_string">contre %s</string>
+    <string name="title_activity_history">Historique</string>
+    <string name="lastPlayed_string">joué %s</string>
+    <string name="challengeNotFound_error">Erreur: Aucun duel trouvé</string>
+    <string name="increase">augmenter</string>
+    <string name="lost">perdu</string>
+    <string name="deletion">Effacer</string>
+    <string name="accept">Accepter</string>
+    <string name="reject">Rejeter</string>
+    <string name="title_activity_game">Jeu</string>
+    <string name="open">En attente...</string>
+    <string name="defeat">Défaite</string>
+    <string name="victory">Victoire</string>
+    <string name="gameClosed">Jeu terminé</string>
+    <string name="game_over">Jeu terminé</string>
+    <string name="game_over_text">Comment le jeu est exécuté?</string>
+    <string name="openGamesFirst">D\'arbord termine le jeu en attente s\'il te plaît.</string>
+    <string name="notGamesyet">pas de jeux</string>
+    <string name="raisesUpTo_string">%1$s augmente à %2$d points</string>
+    <string name="settings">Paramètres</string>
+    <string name="prefsUsername_PreferenceTitle">Ton nom</string>
+    <string name="prefsUsername_Summary">Cet alias est utilisé chez tous tes jeux.</string>
+    <string name="single">simple</string>
+    <string name="dark">Sombre</string>
+    <string name="light">Lumineux</string>
+    <string name="prefsDarkToggle_DialogTitle">Choisissez votre couleur de jeu</string>
+    <string name="prefsDarkToggle_PreferenceTitle">Couleur du jeu préférée</string>
+    <string name="prefsOrientationToggle_PreferenceTitle">Faire pivoter l\'écran</string>
+    <string name="prefsOrientationToggle_SummaryOff">Arrangement original des joueurs</string>
+    <string name="prefsOrientationToggle_SummaryOn">L\'arrangement des joueurs est inversé</string>
+</resources>

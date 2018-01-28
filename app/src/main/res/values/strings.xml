@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name" translatable="false">AppGammon</string>
+    <string name="title_activity_new_challenge">New Challenge</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_game">Game</string>
+
+
+    <string name="hint_PlayerName">Player\'s name</string>
+    <string name="against">against</string>
+    <string name="lastPlayed_string">played %s</string>
+    <string name="youAgainst_string">against %s</string>
+
+    <string name="scoreDivider" translatable="false">:</string>
+    <string name="score_string" translatable="false">%1$d %2$s %3$d</string>
+    <string name="down" translatable="false">-</string>
+    <string name="up" translatable="false">+</string>
+    <string name="lost">lost</string>
+    <string name="increase">increase</string>
+
+    <string name="default_noPoints" translatable="false">0</string>
+    <string name="default_PointsAtStart" translatable="false">1</string>
+
+    <string name="challenge_id" translatable="false">challenge_id</string>
+    <string name="challengeNotFound_error">Error: Challenge not found</string>
+    <string name="ellipsis" translatable="false">...</string>
+    <string name="deletion">Delete</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="open">Pending…</string>
+    <string name="defeat">Defeat</string>
+    <string name="victory">Victory</string>
+    <string name="noScoreYet" translatable="false">%d</string>
+    <string name="game_id" translatable="false">game_id</string>
+    <string name="gameClosed">Game completed</string>
+    <string name="game_over">Game Over</string>
+    <string name="game_over_text">How did the game end?</string>
+    <string name="openGamesFirst">Please finish the pending Games first.</string>
+    <string name="plus" translatable="false">+%d</string>
+    <string name="minus" translatable="false">-%d</string>
+    <string name="notGamesyet">no games yet</string>
+    <string name="raisesUpTo_string">%1$s raises up to %2$d points</string>
+    <string name="settings">Settings</string>
+    <string name="prefsUsername" translatable="false">username</string>
+    <string name="prefsUsername_default" translatable="false">Backgammon Star</string>
+    <string name="prefsUsername_PreferenceTitle">Your name</string>
+    <string name="prefsUsername_Summary">This alias is used for all your games.</string>
+    <string name="nameAndPointsInfo" translatable="false">%1$s  •  %2$d : %3$d (%4$s)</string>
+    <string name="single">single</string>
+
+    <string name="prefsDarkToggle" translatable="false">prefsDarkToggle</string>
+    <string name="prefsDarkToggle_PreferenceTitle">Preferred game color</string>
+    <string name="prefsDarkToggle_DialogTitle">Choose your game color</string>
+    <string name="prefsDarkToggle_default" translatable="false">@string/light_key</string>
+
+    <string name="dark_key" translatable="false">dark</string>
+    <string name="light_key" translatable="false">light</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+
+    <string name="prefsOrientationToggle" translatable="false">prefsOrientationToggle</string>
+    <string name="prefsOrientationToggle_default" translatable="false">false</string>
+    <string name="prefsOrientationToggle_PreferenceTitle">Rotate the screen</string>
+    <string name="prefsOrientationToggle_SummaryOff">Original arrangement of the players</string>
+    <string name="prefsOrientationToggle_SummaryOn">Arrangement of the players is reversed</string>
+
+    <!-- Themes -->
+    <string name="prefsThemesList" translatable="false">prefsThemesList</string>
+    <string name="prefsThemesList_default" translatable="false">@string/theme01_key</string>
+    <string name="prefsThemesList_PreferenceTitle">Themes</string>
+    <string name="prefsThemesList_DialogTitle">Choose a theme</string>
+
+    <string name="theme01">Standard</string>
+    <string name="theme02">Light</string>
+    <string name="theme03">Dark</string>
+
+    <string name="theme01_key">AppTheme</string>
+    <string name="theme02_key">AppTheme_Light</string>
+    <string name="theme03_key">AppTheme_Dark</string>
+
+</resources>
