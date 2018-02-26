@@ -45,6 +45,8 @@ public class GameActivity extends BaseActivity {
     private TextView myExtraInfoTextView;
     private RelativeLayout lightDarkLayout;
     private FrameLayout gameLayout;
+    private String usersName;
+    private String opponentsName;
 
 //    private boolean myTurnToIncrease;
 //    private boolean noPlayerIncreasementYet;
@@ -99,9 +101,10 @@ public class GameActivity extends BaseActivity {
         if (game_id != -1) {
             game = Game.getByPrimaryKey(realm, game_id);
             pointsTextView.setText(String.valueOf(game.getPoints()));
+            opponentsName = game.getChallenge().getOpponent();
         } else {
             Challenge challenge = null;
-            // if there is no Game the must be a Challenge to retrieve
+            // if there is no Game there must be a Challenge to retrieve
             int challenge_id = getIntent().getIntExtra(getString(R.string.challenge_id), -1);
             if (challenge_id != -1) {
                 challenge = Challenge.getByPrimaryKey(realm, challenge_id);
@@ -123,8 +126,9 @@ public class GameActivity extends BaseActivity {
             });
 
             pointsTextView.setText(String.valueOf(game.getPoints()));
+            opponentsName = challenge.getOpponent();
 
-            Log.d(Constants.TAG, "onCreate: " + String.format(Constants.log_challenge_string, challenge.getId(), challenge.getOpponent(), challenge.getMyPoints(), challenge.getOppPoints()));
+            Log.d(Constants.TAG, "onCreate: " + String.format(Constants.log_challenge_string, challenge.getId(), opponentsName, challenge.getMyPoints(), challenge.getOppPoints()));
         }
         Log.d(Constants.TAG, "onCreate: new Game (id" + game.getId() + ") started: " + game.getTimestamp_start() + " initial Points: " + game.getPoints());
 
@@ -140,8 +144,9 @@ public class GameActivity extends BaseActivity {
         // Todo: I18n Strings with replacements!!
         // Todo: Pref Settings Own Name!
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        myNameAndPointsTextView.setText(getString(R.string.nameAndPointsInfo, prefs.getString(getString(R.string.prefsUsername), getString(R.string.prefsUsername_default)), challenge.getMyPoints(), challenge.getOppPoints(), sMyDiff));
-        oppNameAndPointsTextView.setText(getString(R.string.nameAndPointsInfo, challenge.getOpponent(), challenge.getOppPoints(), challenge.getMyPoints(), sOppDiff));
+        usersName = prefs.getString(getString(R.string.prefsUsername), getString(R.string.prefsUsername_default));
+        myNameAndPointsTextView.setText(getString(R.string.nameAndPointsInfo, usersName, challenge.getMyPoints(), challenge.getOppPoints(), sMyDiff));
+        oppNameAndPointsTextView.setText(getString(R.string.nameAndPointsInfo, opponentsName, challenge.getOppPoints(), challenge.getMyPoints(), sOppDiff));
 
         Boolean reverseOrientation = prefs.getBoolean(getString(R.string.prefsOrientationToggle),  Boolean.valueOf(getString(R.string.prefsOrientationToggle_default)));
         if (reverseOrientation) {
@@ -197,8 +202,7 @@ public class GameActivity extends BaseActivity {
         pointsUpBtn.setEnabled(pointsLessThanMax && game.hasNoIncreaseYet());
 
         if (game.isMyAnswerPending()) {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            oppExtraInfoTextView.setText(getString(R.string.raisesUpTo_string, prefs.getString(getString(R.string.prefsUsername), getString(R.string.prefsUsername_default)), game.getPoints() * Constants.MULTIPLY_POINTS_WITH));
+            oppExtraInfoTextView.setText(getString(R.string.raisesUpTo_string, usersName, game.getPoints() * Constants.MULTIPLY_POINTS_WITH));
             oppIncreaseBtn.setText(R.string.accept);
             oppLostbtn.setText(R.string.reject);
             oppIncreaseBtn.setEnabled(true);
@@ -206,7 +210,7 @@ public class GameActivity extends BaseActivity {
             myIncreaseBtn.setEnabled(false);
             myLostBtn.setEnabled(false);
         } else if (game.isOppAnswerPending()) {
-            myExtraInfoTextView.setText(getString(R.string.raisesUpTo_string, game.getChallenge().getOpponent(), game.getPoints() * Constants.MULTIPLY_POINTS_WITH));
+            myExtraInfoTextView.setText(getString(R.string.raisesUpTo_string, opponentsName, game.getPoints() * Constants.MULTIPLY_POINTS_WITH));
             myIncreaseBtn.setText(R.string.accept);
             myLostBtn.setText(R.string.reject);
             myIncreaseBtn.setEnabled(true);
@@ -256,6 +260,7 @@ public class GameActivity extends BaseActivity {
     public void onClick_myLostBtn(View view) {
         if (game.isOppAnswerPending()) {
             this.closeGame(false);
+            showRejectionInfo(usersName);
         } else {
             this.showEndGameDialog(false); // counts for Opp
         }
@@ -264,9 +269,14 @@ public class GameActivity extends BaseActivity {
     public void onClick_oppLostBtn(View view) {
         if (game.isMyAnswerPending()) {
             this.closeGame(true);
+            showRejectionInfo(opponentsName);
         } else {
             this.showEndGameDialog(true); // counts for Me
         }
+    }
+
+    private void showRejectionInfo(String name) {
+        Toast.makeText(this, context.getString(R.string.rejection_info, name, game.getPoints()), Toast.LENGTH_LONG).show();
     }
 
     private void closeGame(boolean countsForMe) {
@@ -289,7 +299,7 @@ public class GameActivity extends BaseActivity {
         }
         realm.commitTransaction();
         Log.d(Constants.TAG, "onClick_[my/opp]LostBtn: " + String.format(Constants.log_game_string, game.getId(), game.getPoints(), game.isClosed(), game.getTimestamp_end()));
-        Log.d(Constants.TAG, "onClick_[my/opp]LostBtn: update " + String.format(Constants.log_challenge_string, challenge.getId(), challenge.getOpponent(), challenge.getMyPoints(), challenge.getOppPoints()));
+        Log.d(Constants.TAG, "onClick_[my/opp]LostBtn: update " + String.format(Constants.log_challenge_string, challenge.getId(), opponentsName, challenge.getMyPoints(), challenge.getOppPoints()));
 
         // Not needed as long as HistoryActicity starts 'ActivityForResult' and goes for 'onActivityResult',
         // If it is the first Game of a new Challenge, returning to Main is just fine.
